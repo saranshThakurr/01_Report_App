@@ -56,19 +56,15 @@
                                   </form:select>
                    </div>
                    <div class='col-md-6'>
-                         Plan Start Date<form:input type="date" class="form control date" path="planStartDate"
-                         pattern="(?:19|20)\[0-9\]{2}-(?:(?:0\[1-9\]|1\[0-2\])-(?:0\[1-9\]|1\[0-9\]|2\[0-9\])|(?:(?!02)(?:0\[1-9\]|1\[0-2\])-(?:30))|(?:(?:0\[13578\]|1\[02\])-31))"
-                         />
+                         Plan Start Date<form:input type="date" class="form control date" path="planStartDate"/>
                       </div>
                       <div class='col-md-6'>
-                         Plan End Date<form:input type="date" class="" path="planEndDate"
-                         pattern="(?:19|20)\[0-9\]{2}-(?:(?:0\[1-9\]|1\[0-2\])-(?:0\[1-9\]|1\[0-9\]|2\[0-9\])|(?:(?!02)(?:0\[1-9\]|1\[0-2\])-(?:30))|(?:(?:0\[13578\]|1\[02\])-31))"
-                         />
+                         Plan End Date<form:input type="date" class="" path="planEndDate"/>
                       </div>
                   </div>
                   <div class="d-flex pt-3">
+                 <a href="/" class="btn btn-danger ">Reset</a> 
                  <input type="submit" value="SEARCH" class="btn btn-primary" />
-                 <input type="reset" value="CLEAR" class="btn btn-danger " />
                  </div>
              </form:form>
              <hr/>
@@ -116,8 +112,8 @@
             </table>
             </div>
              <div class="d-flex justify-content-evenly align-items-center">
-             <a href="excel" class="btn text-white btn-dark">EXCEL</a>
-             <a href="pdf" class="btn text-white btn-dark">PDF</a>
+             <a href="/exportExcel" class="btn text-white btn-dark">EXCEL</a>
+             <a href="/exportPdf" class="btn text-white btn-dark">PDF</a>
              </div>
          </div>
 

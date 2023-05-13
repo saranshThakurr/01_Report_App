@@ -21,7 +21,7 @@ public class DataLoader implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
-//		repo.deleteAll();
+		repo.deleteAll();
 
 		CitizenPlan c1 = new CitizenPlan();
 		c1.setCitizenName("Yash");
@@ -244,6 +244,6 @@ public class DataLoader implements ApplicationRunner {
 
 		List<CitizenPlan> list = Arrays.asList(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16,
 				c17, c18, c19, c20, c21, c22, c23, c24);
-//		repo.saveAll(list);
+		repo.saveAll(list);
 	}
 }

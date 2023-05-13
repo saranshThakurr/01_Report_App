@@ -2,6 +2,8 @@ package com.saranshit.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +21,18 @@ public class ReportController {
 	@Autowired
 	private ReportService service;
 	
+	@GetMapping("/exportExcel")
+	public void excelExport(HttpServletResponse response) throws Exception {
+		response.setContentType("application/octet-stream");
+		response.addHeader("Content-Disposition", "attachment;filename=plans.xls");
+		service.exportExcel(response);
+	}
+	@GetMapping("/exportPdf")
+	public void excelPdf(HttpServletResponse response) throws Exception {
+		response.setContentType("application/pdf");
+		response.addHeader("Content-Disposition", "attachment;filename=plans.pdf");
+		service.exportPdf(response);
+	}
 	
 	@PostMapping("/search")
     public String handleSearch(@ModelAttribute("search")  SearchRequest search , Model model) {
